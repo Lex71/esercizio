@@ -4,8 +4,6 @@ namespace App\Services;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Log;
-// use App\Http\Resources\BrewCollection;
-// use Illuminate\Pagination\LengthAwarePaginator;
 
 class BreweryService
 {
@@ -30,13 +28,7 @@ class BreweryService
     $response = $client->request('GET', $this->requestUrl . $params);
 
     try {
-      return $response->getBody(); //->getContents();
-
-      // $data = $response->getBody();
-      // $res = collect(json_decode($data));
-      // $paginator = new LengthAwarePaginator($res, $res->count(), $perPage, $page);
-
-      // return BrewCollection::make($paginator);
+      return $response->getBody();
     } catch (\Exception $e) {
       Log::error('Error retrieving  brewery data: ' . $e->getMessage());
       throw new \Exception('Error retrieving brewery data: ' . $e->getMessage());
