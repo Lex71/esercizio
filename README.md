@@ -51,7 +51,7 @@ After creating a database as configured in .env:
 # Enter mysql container
 $ docker exec -it db bash
 
-bash-5.1# mysql -ularavel_user -p
+bash-5.1# mysql -uroot -p
 mysql> CREATE DATABASE laravel;
 mysql> exit
 bash-5.1# exit
