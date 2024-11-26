@@ -40,6 +40,7 @@ $ docker compose up -d --build
 $ docker exec -it php bash
 
 /var/www/html# composer install
+/var/www/html# php artisan key:generate
 ```
 
 
@@ -57,6 +58,9 @@ bash-5.1# exit
 ```
 
 ```bash
+# Enter laravel container
+$ docker exec -it php bash
+
 /var/www/html# php artisan migrate
 /var/www/html# php artisan db:seed
 ```
