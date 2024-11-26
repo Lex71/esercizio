@@ -52,7 +52,7 @@ After creating a database as configured in .env:
 $ docker exec -it db bash
 
 bash-5.1# mysql -uroot -p
-mysql> CREATE DATABASE laravel;
+mysql> CREATE DATABASE esercizio;
 mysql> exit
 bash-5.1# exit
 ```
